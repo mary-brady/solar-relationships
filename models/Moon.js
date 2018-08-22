@@ -15,6 +15,21 @@ let schema = new Schema({
     size: {
         type: String,
         default: "size not provided"
+    },
+    galaxyId: {
+        type: ObjectId,
+        ref: 'Galaxy',
+        required: true
+    },
+    starId: {
+        type: ObjectId,
+        ref: 'Star',
+        required: true
+    },
+    planetId: {
+        type: ObjectId,
+        ref: 'Planet',
+        required: true
     }
 
 })
